@@ -26,7 +26,7 @@ else
 		;;
 	esac
 	
-	java -XX:+Use${GC}GC -XX:+PrintCommandLineFlags -cp target com.ing.jangel.garbagecollectors.MainSingleThread
+	java -XX:+Use${GC}GC -XX:+PrintCommandLineFlags -cp target com.ing.jangel.garbagecollectors.MainMultiThread
 	
 	if [ $? -ne 0 ]; then
     	echo "java is not present in your path"
