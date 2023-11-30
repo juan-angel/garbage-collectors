@@ -19,7 +19,7 @@ IF "%#%" EQU "0" (
     echo "Unsupported option %~1"
     exit
   )
-  java "-XX:+Use%GC%GC" "-XX:+PrintCommandLineFlags" "-cp" "target" "com.ing.jangel.garbagecollectors.MainMultiThread"
+  java "-XX:+Use%GC%GC" "-XX:+PrintCommandLineFlags" "-cp" "target/garbage-collectors-0.0.1-SNAPSHOT.jar" "com.ing.jangel.garbagecollectors.MainMultiThread"
   IF "%?%" NEQ "0" (
     echo "java is not present in your path"
   )
