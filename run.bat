@@ -1,5 +1,7 @@
 @echo off
 
+setlocal enabledelayedexpansion
+
 IF "%#%" EQU "0" (
   echo "Please, specify the number of the GC you want to use as argument:"
   echo "1) Serial"
@@ -19,7 +21,7 @@ IF "%#%" EQU "0" (
     echo "Unsupported option %~1"
     exit
   )
-  java "-XX:+Use%GC%GC" "-XX:+PrintCommandLineFlags" "-cp" "target/garbage-collectors-0.0.1-SNAPSHOT.jar" "com.ing.jangel.garbagecollectors.MainSingleThread"
+  java "-XX:+Use!GC!GC" "-XX:+PrintCommandLineFlags" "-cp" "target/garbage-collectors-0.0.1-SNAPSHOT.jar" "com.ing.jangel.garbagecollectors.MainSingleThread"
   IF "%?%" NEQ "0" (
     echo "java is not present in your path"
   )
