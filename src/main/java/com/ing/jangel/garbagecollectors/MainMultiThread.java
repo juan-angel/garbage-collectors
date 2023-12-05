@@ -18,6 +18,7 @@ public class MainMultiThread {
 	    executorService.awaitTermination(1000, TimeUnit.SECONDS);
 
 		System.out.println("Time: " + (System.currentTimeMillis() - d) + "ms.");
+		Thread.sleep(15000);
 	}
 
 	private static class MemoryConsumer implements Runnable {

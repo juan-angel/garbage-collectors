@@ -20,6 +20,7 @@ public class MainSingleThread {
 		});
 
 		System.out.println("Time: " + (System.currentTimeMillis() - d) + "ms.");
+		Thread.sleep(15000);
 	}
 
 }
